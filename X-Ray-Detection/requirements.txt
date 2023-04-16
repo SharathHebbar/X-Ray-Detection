@@ -1,0 +1,10 @@
+tensorflow==2.11.0
+tensorflow-addons
+pandas
+opencv-python==4.6.0.66
+numpy
+matplotlib
+scikit-learn
+seaborn
+Flask==2.2.3
+Pillow==9.3.0

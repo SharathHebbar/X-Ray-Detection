@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Prediction Results</title>
+	<style>
+		body {
+			background-color: #f1f1f1;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			color: #2d2d2d;
+			font-size: 32px;
+			margin-top: 50px;
+		}
+        form {
+			margin: 50px auto;
+			width: 50%;
+			padding: 20px;
+			border-radius: 5px;
+			background-color: #ffffff;
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 80%;
+			max-height: 400px;
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+			border-radius: 5px;
+		}
+		p {
+			text-align: center;
+			color: #2d2d2d;
+			font-size: 24px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+    <form>
+	<h1>X-Ray Image Prediction Results</h1>
+	<h2>{{ prediction }}</h2>
+    <img src="{{ url_for('static', filename=image_file) }}" alt="Uploaded Image">
+    <br>
+</form>
+</body>
+</html>
