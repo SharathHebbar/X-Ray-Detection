@@ -4,6 +4,8 @@ import os
 # for datetime functionalities
 import datetime
 
+from dotenv import load_dotenv
+
 # for image manipulation
 import cv2
 
@@ -39,11 +41,13 @@ from tensorflow.keras.applications.resnet50 import ResNet50
 
 print(tf.__version__)
 
+load_dotenv()
 
-BATCH_SIZE = 8 #16
-EPOCHS = 5
-IM_SIZE_W = 150 #300
-IM_SIZE_H = 200 #400
+model_weight = os.environ.get("model")
+
+BATCH_SIZE = int(os.environ.get('BATCH_SIZE'))
+IM_SIZE_W = int(os.environ.get('IM_SIZE_w'))
+IM_SIZE_H = int(os.environ.get('IM_SIZE_H'))
 
 AUTOTUNE = tf.data.experimental.AUTOTUNE
 
@@ -156,8 +160,7 @@ def pre_process_image(img):
 def predict_probability(img):
     test_gen = pre_process_image(img)
     model = create_model()
-    model.load_weights('./loss-0.3126.h5')
-    # model = tf.keras.models.load_model('./loss-0.3126.h5')
+    model.load_weights(model_weight)
     predict = model.predict(test_gen)
 
     prd = np.argmax(predict)
