@@ -1,0 +1,116 @@
+body {
+    background-color: #5418bb;
+    font-family: Arial, sans-serif;
+  }
+
+  nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  nav .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+  }
+  
+  nav .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav .nav-links li a:hover {
+    background-color: #fff;
+    color: #333;
+  }
+
+  
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4c56af;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #7715c2;
+  }
+  
+
+input[type=radio] {
+    display: none;
+  }
+  
+  label {
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  label img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  input[type=radio]:checked + label {
+    border-color: blue;
+  }
+  
+  .form-control {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1; 
+  }

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Panel</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/samples_files.css') }}">
+    <style>
+      [type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid #f00;
+}
+
+.image-radio {
+  cursor:pointer;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  border:4px solid transparent;
+  outline:0;
+}
+
+/* .image-radio input[type="radio"] {
+  display:none;
+} */
+
+.image-radio-checked {
+  border-color:#f58723;
+  border: 1px dashed red;
+}
+
+.image-radio input[type="radio"]:checked+label img  {
+padding:0px;
+border: 1px dashed red;
+}
+.image-radio input[type="radio"]+label img {
+padding: 1px;
+}
+/* input[type=radio] {
+  display:none;
+} */
+
+.item-detail .item-price {
+  font-weight:bold;
+  color:#201E20;
+  padding-bottom:10px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>X-Ray Detection for Pneumonia and Covid-19</h1>
+        <div class="container1">
+          
+          <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('admin') }}">Admin</a></li>
+          </ul>
+        </div>
+      </nav>
+
+	<div class="container">
+        <center>
+		<h1>Sample Files</h1>
+    </center>
+        <form method="POST">
+            <center>
+            <h3>Normal Images</h3>
+            
+            
+            <input type="radio" id="image1" name="image" value="images/Normal (1).jpg">
+            <label class="form-control"  for="image1"></label><img src="{{ url_for('static', filename='images/Normal (1).jpg') }}" width="100px" height="100px"></label>
+          
+            <input type="radio" id="image2" name="image" value='images/Normal (2).jpg'>
+            <label class="form-control" for="image2"><img src="{{ url_for('static', filename='images/Normal (2).jpg') }}" width="100px" height="100px"></label>
+          
+            <input type="radio" id="image3" name="image" value="images/Normal (3).jpg">
+            <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Normal (3).jpg') }}" width="100px" height="100px"></label>
+
+            <input type="radio" id="image4" name="image" value="images/Normal (4).jpg">
+            <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Normal (4).jpg') }}" width="100px" height="100px"></label>
+            
+            <h3>Pneumonia Bacterial Images</h3>
+            
+            <input type="radio" id="image1" name="image" value="images/Pneumonia-Bacterial (1).jpg">
+            <label class="form-control"  for="image1"><img src="{{ url_for('static', filename='images/Pneumonia-Bacterial (1).jpg') }}" width="100px" height="100px"></label>
+          
+            <input type="radio" id="image2" name="image" value='images/Pneumonia-Bacterial (2).jpg'>
+            <label class="form-control"  for="image2"><img src="{{ url_for('static', filename='images/Pneumonia-Bacterial (2).jpg') }}" width="100px" height="100px"></label>
+          
+            <input type="radio" id="image3" name="image" value="images/Pneumonia-Bacterial (3).jpg">
+            <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Pneumonia-Bacterial (3).jpg') }}" width="100px" height="100px"></label>
+
+            <input type="radio" id="image4" name="image" value="images/Pneumonia-Bacterial (4).jpg">
+            <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Pneumonia-Bacterial (4).jpg') }}" width="100px" height="100px"></label>
+            <br>
+            <h3>Pneumonia Viral Images</h3>
+
+            <input type="radio" id="image1" name="image" value="images/Pneumonia-Viral (1).jpg">
+            <label class="form-control"  for="image1"><img src="{{ url_for('static', filename='images/Pneumonia-Viral (1).jpg') }}" width="100px" height="100px"></label>
+          
+            <input type="radio" id="image2" name="image" value='images/Pneumonia-Viral (2).jpg'>
+            <label class="form-control"  for="image2"><img src="{{ url_for('static', filename='images/Pneumonia-Viral (2).jpg') }}" width="100px" height="100px"></label>
+          
+            <input type="radio" id="image3" name="image" value="images/Pneumonia-Viral (3).jpg">
+            <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Pneumonia-Viral (3).jpg') }}" width="100px" height="100px"></label>
+
+            <input type="radio" id="image4" name="image" value="images/Pneumonia-Viral (4).jpg">
+            <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Pneumonia-Viral (4).jpg') }}" width="100px" height="100px"></label>
+        
+            <h3>Covid-19 Images</h3>
+            
+
+            <input type="radio" id="image1" name="image" value="images/COVID-19 (1).jpg">
+            <label class="form-control"  for="image1"><img src="{{ url_for('static', filename='images/COVID-19 (1).jpg') }}" width="100px" height="100px"></label>
+          
+            <input type="radio" id="image2" name="image" value='images/COVID-19 (2).jpg'>
+            <label class="form-control"  for="image2"><img src="{{ url_for('static', filename='images/COVID-19 (2).jpg') }}" width="100px" height="100px"></label>
+          
+            <input type="radio" id="image3" name="image" value="images/COVID-19 (3).jpg">
+            <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/COVID-19 (3).jpg') }}" width="100px" height="100px"></label>
+
+            <input type="radio" id="image4" name="image" value="images/COVID-19 (4).jpg">
+            <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/COVID-19 (4).jpg') }}" width="100px" height="100px"></label>
+                
+            <br><br>
+            
+            <input type="submit" value="Predict">
+        </center>
+          </form>
+          
+	</div>
+
+  <script>
+
+jQuery(function ($) {
+        // init the state from the input
+        $(".image-radio").each(function () {
+            if ($(this).find('input[type="radio"]').first().attr("checked")) {
+                $(this).addClass('image-radio-checked');
+            }
+            else {
+                $(this).removeClass('image-radio-checked');
+            }
+        });
+
+        // sync the state to the input
+        $(".image-radio").on("click", function (e) {
+            if ($(this).hasClass('image-radio-checked')) {
+                $(this).removeClass('image-radio-checked');
+                $(this).find('input[type="radio"]').first().removeAttr("checked");
+            }
+            else {
+                $(this).addClass('image-radio-checked');
+                $(this).find('input[type="radio"]').first().attr("checked", "checked");
+            }
+
+            e.preventDefault();
+        });
+    });
+
+  </script>
+</body>
+</html>

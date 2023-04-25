@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>X-ray Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  </head>
+  <body>
+    <nav>
+      <h1>X-Ray Detection for Pneumonia and Covid-19</h1>
+      <div class="container">
+        
+        <ul class="nav-links">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('login') }}">Sign In</a></li>
+          <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+          <li><a href="{{ url_for('admin') }}">Admin</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content">
+      <img src="{{ url_for('static', filename='images/BG.png') }}" alt="Uploaded Image" width="60%", height="60%">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

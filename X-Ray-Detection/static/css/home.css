@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    background-color: #5418bb;
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  nav .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+  }
+  
+  nav .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav .nav-links li a:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .content {
+    background-image: url("/static/bg.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Add any additional CSS styles for your Flask app here */
+  

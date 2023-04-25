@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+	<nav>
+		<h1>X-Ray Detection for Pneumonia and Covid-19</h1>
+		<div class="container1">
+		  
+		  <ul class="nav-links">
+			<li><a href="{{ url_for('home') }}">Home</a></li>
+			<li><a href="{{ url_for('about') }}">About</a></li>
+			<li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+			<li><a href="{{ url_for('login') }}">Sign In</a></li>
+		  </ul>
+		</div>
+	  </nav>
+	
+	<div class="container">
+		<h1>Admin Login Page</h1>
+		
+		{% with messages = get_flashed_messages() %}  
+	{% if messages %}  
+		  {% for message in messages %}  
+		  <hr>
+			   <center><p>{{ message }}</p></center></td>
+			   <hr>
+		  {% endfor %}  
+	{% endif %}  
+ {% endwith %}  
+
+		<form method="POST">
+            <!-- <img src="{{ url_for('static', filename='images/BG.png') }}" alt="Uploaded Image" width="100%", height="100%"> -->
+			<label for="username">Admin Username</label>
+			<input type="text" id="username" name="username" required>
+			<label for="password">Admin Password</label>
+			<input type="password" id="password" name="password" required>
+			<button type="submit">Admin Log In</button>
+		</form>
+	</div>
+</body>
+</html>

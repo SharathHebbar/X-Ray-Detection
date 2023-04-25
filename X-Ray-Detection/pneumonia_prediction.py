@@ -158,6 +158,7 @@ def pre_process_image(img):
     
 
 def predict_probability(img):
+
     test_gen = pre_process_image(img)
     model = create_model()
     model.load_weights(model_weight)

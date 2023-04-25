@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Panel</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+	<nav>
+		<h1>X-Ray Detection for Pneumonia and Covid-19</h1>
+		<div class="container1">
+		  
+		  <ul class="nav-links">
+			<li><a href="{{ url_for('home') }}">Home</a></li>
+			<li><a href="{{ url_for('about') }}">About</a></li>
+			<li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+			<li><a href="{{ url_for('admin') }}">Admin</a></li>
+		  </ul>
+		</div>
+	  </nav>
+	  <br>
+	<div class="container">
+		<h1>List of Users</h1>
+		           <!-- List all the datas from DB give out delete functionalities with that -->
+		<form action="/delete_data" method="POST">
+			<table border="2px" width=100px height=100px>
+		
+			<tr>
+				<th>UserName</th>
+				<th>Password</th>
+				<th>Delete Entry</th>
+			</tr>
+			{% for data in datas %}
+			<tr>
+				<td>{{data[0]}}</td>
+				<td>{{data[1]}}</td> 
+				<td><input type="hidden" name="username" value="{{ data[0] }}">
+					<input type="hidden" name="password" value="{{ data[1] }}">
+					<button type="submit" name="delete" value="delete">Delete</button></td>
+			</tr>
+			{% endfor %}
+			
+		</table>
+	</form>
+	</div>
+</body>
+</html>
