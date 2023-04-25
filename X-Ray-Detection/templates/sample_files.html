@@ -4,14 +4,20 @@
 	<title>Admin Panel</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/samples_files.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <style>
       [type=radio] { 
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 10;
+  height: 10;
+  /* outline: 2px solid #f00; */
 }
+
+[type=radio]:checked + label{
+  outline: 2px solid #f00;
+}
+
 
 /* IMAGE STYLES */
 [type=radio] + img {
@@ -82,14 +88,17 @@ padding: 1px;
             
             
             <input type="radio" id="image1" name="image" value="images/Normal (1).jpg">
-            <label class="form-control"  for="image1"></label><img src="{{ url_for('static', filename='images/Normal (1).jpg') }}" width="100px" height="100px"></label>
-          
+            <label class="form-control"  for="image1"><img src="{{ url_for('static', filename='images/Normal (1).jpg') }}" width="100px" height="100px"></label>
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image2" name="image" value='images/Normal (2).jpg'>
             <label class="form-control" for="image2"><img src="{{ url_for('static', filename='images/Normal (2).jpg') }}" width="100px" height="100px"></label>
-          
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image3" name="image" value="images/Normal (3).jpg">
             <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Normal (3).jpg') }}" width="100px" height="100px"></label>
-
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image4" name="image" value="images/Normal (4).jpg">
             <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Normal (4).jpg') }}" width="100px" height="100px"></label>
             
@@ -97,13 +106,16 @@ padding: 1px;
             
             <input type="radio" id="image1" name="image" value="images/Pneumonia-Bacterial (1).jpg">
             <label class="form-control"  for="image1"><img src="{{ url_for('static', filename='images/Pneumonia-Bacterial (1).jpg') }}" width="100px" height="100px"></label>
-          
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image2" name="image" value='images/Pneumonia-Bacterial (2).jpg'>
             <label class="form-control"  for="image2"><img src="{{ url_for('static', filename='images/Pneumonia-Bacterial (2).jpg') }}" width="100px" height="100px"></label>
-          
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image3" name="image" value="images/Pneumonia-Bacterial (3).jpg">
             <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Pneumonia-Bacterial (3).jpg') }}" width="100px" height="100px"></label>
-
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image4" name="image" value="images/Pneumonia-Bacterial (4).jpg">
             <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Pneumonia-Bacterial (4).jpg') }}" width="100px" height="100px"></label>
             <br>
@@ -111,13 +123,16 @@ padding: 1px;
 
             <input type="radio" id="image1" name="image" value="images/Pneumonia-Viral (1).jpg">
             <label class="form-control"  for="image1"><img src="{{ url_for('static', filename='images/Pneumonia-Viral (1).jpg') }}" width="100px" height="100px"></label>
-          
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image2" name="image" value='images/Pneumonia-Viral (2).jpg'>
             <label class="form-control"  for="image2"><img src="{{ url_for('static', filename='images/Pneumonia-Viral (2).jpg') }}" width="100px" height="100px"></label>
-          
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image3" name="image" value="images/Pneumonia-Viral (3).jpg">
             <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Pneumonia-Viral (3).jpg') }}" width="100px" height="100px"></label>
-
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image4" name="image" value="images/Pneumonia-Viral (4).jpg">
             <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/Pneumonia-Viral (4).jpg') }}" width="100px" height="100px"></label>
         
@@ -126,13 +141,16 @@ padding: 1px;
 
             <input type="radio" id="image1" name="image" value="images/COVID-19 (1).jpg">
             <label class="form-control"  for="image1"><img src="{{ url_for('static', filename='images/COVID-19 (1).jpg') }}" width="100px" height="100px"></label>
-          
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image2" name="image" value='images/COVID-19 (2).jpg'>
             <label class="form-control"  for="image2"><img src="{{ url_for('static', filename='images/COVID-19 (2).jpg') }}" width="100px" height="100px"></label>
-          
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image3" name="image" value="images/COVID-19 (3).jpg">
             <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/COVID-19 (3).jpg') }}" width="100px" height="100px"></label>
-
+            &nbsp;
+            &nbsp;
             <input type="radio" id="image4" name="image" value="images/COVID-19 (4).jpg">
             <label class="form-control"  for="image3"><img src="{{ url_for('static', filename='images/COVID-19 (4).jpg') }}" width="100px" height="100px"></label>
                 
@@ -143,35 +161,5 @@ padding: 1px;
           </form>
           
 	</div>
-
-  <script>
-
-jQuery(function ($) {
-        // init the state from the input
-        $(".image-radio").each(function () {
-            if ($(this).find('input[type="radio"]').first().attr("checked")) {
-                $(this).addClass('image-radio-checked');
-            }
-            else {
-                $(this).removeClass('image-radio-checked');
-            }
-        });
-
-        // sync the state to the input
-        $(".image-radio").on("click", function (e) {
-            if ($(this).hasClass('image-radio-checked')) {
-                $(this).removeClass('image-radio-checked');
-                $(this).find('input[type="radio"]').first().removeAttr("checked");
-            }
-            else {
-                $(this).addClass('image-radio-checked');
-                $(this).find('input[type="radio"]').first().attr("checked", "checked");
-            }
-
-            e.preventDefault();
-        });
-    });
-
-  </script>
 </body>
 </html>

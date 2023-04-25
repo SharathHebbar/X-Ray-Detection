@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Image Prediction Results</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
 	<nav>
@@ -17,7 +17,7 @@
 		</div>
 	  </nav>
     <form>
-	<h1>X-Ray Image Prediction Results</h1>
+	<h2>X-Ray Image Prediction Results</h2>
 	<b>{{ prediction }}</b>
 	<br>
     <img src="{{ url_for('static', filename=image_file) }}" alt="Uploaded Image">

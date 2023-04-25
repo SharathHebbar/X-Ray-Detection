@@ -101,8 +101,8 @@ def delete_records():
         username = request.form['username']
         password = request.form['password']
         delete_data(username, password)
-        redirect(url_for('admin_panel'))
-    redirect(url_for('admin_panel'))
+        return redirect(url_for('admin_panel'))
+    return redirect(url_for('admin_panel'))
     # return render_template('admin_panel.html')
 
 
@@ -112,7 +112,7 @@ def forgot_password():
         username = request.form['username']
         password = request.form['newpass']
         update_password(username, password)
-        redirect(url_for('login'))
+        return redirect(url_for('login'))
     return render_template('forgot.html')
 
 
