@@ -1,51 +1,101 @@
-* {
-    box-sizing: border-box;
-    background-color: #f8f6fa;
-  }
-  
-  nav {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  nav .logo {
-    font-size: 1.5rem;
+
+body { 
+  width: 100%;
+  height:100%;
+  font-family: 'Open Sans', sans-serif;
+  /* background-image: linear-gradient(rgb(19, 25, 33), white); */
+  background-color: #555;
+ 
+}
+
+
+/* Full-width input fields */
+input[type=text],input[name = pass],input[name=newpass]{
+width: 30%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 2px solid #ccc;
+box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button{
+    
+    background-color: #FF69B4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    
+    cursor: pointer;
+    width: 30%;
+
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    border:none;
+    outline: 0;
+    border-radius: 55px;
     font-weight: bold;
-    text-decoration: none;
+    font-family: georgia, "Times New Roman", Times,serif;
+
+}
+button:hover{
+    opacity: 0.8;
+    background: #03e9f4;
     color: #fff;
-  }
-  
-  nav .nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-  }
-  
-  nav .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  nav .nav-links li a:hover {
-    background-color: #fff;
-    color: #333;
-  }
-  
-  .content {
-    background-image: url("/static/bg.jpg");
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Add any additional CSS styles for your Flask app here */
-  
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+
+img.cp {
+width: 10%;
+border-radius: 20%;
+background-color: #483D8B;
+}
+
+div.acc
+{
+text-align: center;
+}
+
+select{
+width: 10%;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav .nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+nav .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav .nav-links li a:hover {
+  background-color: #fff;
+  color: #333;
+}

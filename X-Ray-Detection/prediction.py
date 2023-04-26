@@ -20,7 +20,7 @@ def about():
 def admin():
     if request.method == 'POST':
         username = request.form['username']
-        password = request.form['password']
+        password = request.form['pass']
         if username == 'admin' and password == 'admin':
             return redirect(url_for('admin_panel'))
         else:
@@ -127,6 +127,6 @@ def predict():
     return render_template('predict.html', prediction=pred_name, image_file=image_name)
 
 if __name__ == '__main__':
-    # app.run(debug=True)
+    app.run(debug=True)
     
-    app.run(debug=True, host='0.0.0.0')
+    # app.run(debug=True, host='0.0.0.0')

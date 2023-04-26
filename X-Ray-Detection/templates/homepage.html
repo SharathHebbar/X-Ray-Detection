@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>X-ray Detection</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
   </head>
   <body>
     <nav>
@@ -19,7 +19,11 @@
       </div>
     </nav>
     <div class="content">
+      <br/><br/><br/>
+      <center>
+        
       <img src="{{ url_for('static', filename='images/BG.png') }}" alt="Uploaded Image" width="60%", height="60%">
+    </center> 
       {% block content %}{% endblock %}
     </div>
   </body>

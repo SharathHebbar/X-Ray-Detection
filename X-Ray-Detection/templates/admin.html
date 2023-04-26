@@ -4,7 +4,7 @@
 	<title>Login Page</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 	<nav>
@@ -35,11 +35,15 @@
 
 		<form method="POST">
             <!-- <img src="{{ url_for('static', filename='images/BG.png') }}" alt="Uploaded Image" width="100%", height="100%"> -->
-			<label for="username">Admin Username</label>
-			<input type="text" id="username" name="username" required>
-			<label for="password">Admin Password</label>
-			<input type="password" id="password" name="password" required>
-			<button type="submit">Admin Log In</button>
+		<center>
+			<input type ="text" placeholder="Enter Admin E-mail id" name ="username" data-type = "E-mail" required>  
+			<br/>
+
+		<input type ="password" placeholder="Enter Admin password" name ="pass"  required>  
+
+			<br/>
+		<button type="submit" name ="log">Login</button>
+			</center>
 		</form>
 	</div>
 </body>

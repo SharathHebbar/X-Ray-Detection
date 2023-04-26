@@ -1,5 +1,5 @@
 body {
-    background-color: #5418bb;
+
     font-family: Arial, sans-serif;
   }
 
@@ -36,15 +36,6 @@ body {
   nav .nav-links li a:hover {
     background-color: #fff;
     color: #333;
-  }
-  
-  .content {
-    background-image: url("/static/bg.jpg");
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   .container {

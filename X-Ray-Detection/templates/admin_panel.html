@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"> -->
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_panel.css') }}">
+	<!-- <link rel="stylesheet" href="C:\sharath\Github\ML-projects\X-Ray-Detection\X-Ray-Detection\static\css\admin_panel.css"> -->
+	
 </head>
 <body>
 	<nav>
@@ -22,6 +24,7 @@
 	  </nav>
 	  <br>
 	<div class="container">
+		<center>
 		<h1>List of Users</h1>
 		           <!-- List all the datas from DB give out delete functionalities with that -->
 		<form action="/delete_data" method="POST">
@@ -38,12 +41,14 @@
 				<td>{{data[1]}}</td> 
 				<td><input type="hidden" name="username" value="{{ data[0] }}">
 					<input type="hidden" name="password" value="{{ data[1] }}">
+					
 					<button type="submit" name="delete" value="delete">Delete</button></td>
 			</tr>
 			{% endfor %}
 			
 		</table>
 	</form>
+</center>
 	</div>
 </body>
 </html>
