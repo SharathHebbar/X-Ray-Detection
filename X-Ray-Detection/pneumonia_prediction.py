@@ -1,13 +1,7 @@
 # for os operations
 import os
 
-# for datetime functionalities
-import datetime
-
 from dotenv import load_dotenv
-
-# for image manipulation
-import cv2
 
 # for matrix operations
 import numpy as np
@@ -17,10 +11,6 @@ import pandas as pd
 
 # for random number generation
 import secrets
-
-# for plotting graphs
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 # for machine learning utilities
 from sklearn.utils import shuffle
