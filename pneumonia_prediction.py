@@ -33,7 +33,7 @@ print(tf.__version__)
 
 load_dotenv()
 
-model_weight = os.environ.get("model")
+model_weight = os.environ.get("Model")
 
 BATCH_SIZE = int(os.environ.get('BATCH_SIZE'))
 IM_SIZE_W = int(os.environ.get('IM_SIZE_w'))
